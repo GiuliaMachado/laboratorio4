@@ -102,7 +102,8 @@ int main() {
     vector_remove(v, (void*)a);
 
     printf("Elementos no vetor após remover o primeiro numero: %d\n", *(int*)vector_at(v, 0));
-
+    free(a);  // Liberar a memória alocada para 'a'
+    free(b);
     vector_destroy(v);
 
     // tipo struct _ponto
@@ -120,7 +121,7 @@ int main() {
 
     PontoStruct* p_result = (PontoStruct*)vector_at(v_ponto, 0);
     printf("Ponto: x=%d, y=%d\n", p_result->x, p_result->y);
-
+    free(p);
     vector_destroy(v_ponto);
 
     return 0;

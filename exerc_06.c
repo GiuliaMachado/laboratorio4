@@ -44,7 +44,7 @@ int main(){
     imprime_vetor(a, n);
 
     //2 vetor   
-    printf("Digite o tamanho do primeiro vetor: ");
+    printf("Digite o tamanho do segundo vetor: ");
     scanf("%d", &m);
     b = aloca_vetor(m);
     le_vetor(b, m);
